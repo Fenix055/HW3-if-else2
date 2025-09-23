@@ -3,9 +3,9 @@ import java.util.Random;
 public class Main {
     public static void main(String[] args) {
         /// Task 1
-        boolean clientOS = new Random().nextBoolean();
+        int clientOS = new Random().nextInt(2);
 
-        if (clientOS) {
+        if (clientOS == 1) {
             System.out.println("Установите версию приложения для Android по ссылке");
         } else {
             System.out.println("Установите версию приложения для iOS по ссылке");
@@ -14,11 +14,11 @@ public class Main {
         /// Task 2
         short clientDeviceYear = 2015;
 
-        if (clientDeviceYear < 2015 && clientOS) {
+        if (clientDeviceYear < 2015 && clientOS == 1) {
             System.out.println("Установите облегченную версию приложения для Android по ссылке");
-        } else if (clientDeviceYear < 2015 && !clientOS) {
+        } else if (clientDeviceYear < 2015 && clientOS != 1) {
             System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-        } else if (clientDeviceYear >= 2015 && clientOS) {
+        } else if (clientDeviceYear >= 2015 && clientOS == 1) {
             System.out.println("Установите версию приложения для Android по ссылке");
         } else {
             System.out.println("Установите версию приложения для iOS по ссылке");
